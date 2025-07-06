@@ -134,7 +134,7 @@ async function postQuotesToServer(quotesToPost) {
       method: 'POST',
       body: JSON.stringify(quotesToPost),
       headers: {
-        'Content-type': 'application/json; charset=UTF-8',
+        'Content-Type': 'application/json; charset=UTF-8',
       },
     });
     const data = await response.json();
@@ -144,6 +144,7 @@ async function postQuotesToServer(quotesToPost) {
     alert("Failed to post quotes to server.");
   }
 }
+
 
 // ✅ Sync quotes with async/await
 async function syncQuotes() {
