@@ -172,3 +172,23 @@ document.getElementById('newQuote').addEventListener('click', showRandomQuote);
 // Initial setup
 populateCategories();
 showRandomQuote();
+function createAddQuoteForm() {
+  const container = document.createElement('div');
+
+  const quoteInput = document.createElement('input');
+  quoteInput.id = 'newQuoteText';
+  quoteInput.placeholder = 'Enter a new quote';
+  container.appendChild(quoteInput);
+
+  const categoryInput = document.createElement('input');
+  categoryInput.id = 'newQuoteCategory';
+  categoryInput.placeholder = 'Enter quote category';
+  container.appendChild(categoryInput);
+
+  const addButton = document.createElement('button');
+  addButton.textContent = 'Add Quote';
+  addButton.addEventListener('click', addQuote);
+  container.appendChild(addButton);
+
+  document.body.appendChild(container);
+}
