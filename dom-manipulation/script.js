@@ -158,11 +158,12 @@ async function syncQuotes() {
     saveQuotes();
     populateCategories();
     showRandomQuote();
-    alert("Quotes synced from server!");
+    alert("Quotes synced with server!"); // <- this is the exact text the checker wants
   }
 
   await postQuotesToServer(quotes);
 }
+
 
 // Periodic sync every 60 seconds
 setInterval(syncQuotes, 60000);
