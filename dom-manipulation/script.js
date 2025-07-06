@@ -115,3 +115,19 @@ function importFromJsonFile(event) {
 
 // Event listener for random quote button
 document.getElementById('newQuote').addEventListener('click', showRandomQuote);
+function addQuote() {
+  const text = document.getElementById('newQuoteText').value.trim();
+  const category = document.getElementById('newQuoteCategory').value.trim();
+
+  if (!text || !category) {
+    alert("Both quote and category are required!");
+    return;
+  }
+
+  quotes.push({ text, category });        // ✅ Adds quote to the array
+  saveQuotes();                           // ✅ Saves to local storage
+  populateCategories();                   // ✅ Updates dropdown
+  document.getElementById('newQuoteText').value = '';
+  document.getElementById('newQuoteCategory').value = '';
+  alert("Quote added!");
+}
