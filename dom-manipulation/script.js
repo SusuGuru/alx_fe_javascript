@@ -168,6 +168,7 @@ setInterval(syncQuotes, 60000);
 
 // Event listener for "Show New Quote"
 document.getElementById('newQuote').addEventListener('click', showRandomQuote);
+createAddQuoteForm();
 
 // Initial setup
 populateCategories();
