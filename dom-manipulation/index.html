@@ -8,33 +8,33 @@
 <body>
   <h1>Dynamic Quote Generator</h1>
 
-  <!-- Display Area -->
-  <div id="quoteDisplay">Click the button to show a quote</div>
+  <!-- Display area -->
+  <div id="quoteDisplay"></div>
+
+  <!-- Show random quote -->
   <button id="newQuote">Show New Quote</button>
 
-  <hr />
+  <!-- Sync button for Task 3 -->
+  <button onclick="syncQuotes()">Sync with Server</button>
 
-  <!-- Add New Quote -->
-  <h2>Add a Quote</h2>
-  <input id="newQuoteText" type="text" placeholder="Enter a new quote" />
-  <input id="newQuoteCategory" type="text" placeholder="Enter quote category" />
-  <button onclick="addQuote()">Add Quote</button>
+  <!-- Add new quote -->
+  <div>
+    <input id="newQuoteText" type="text" placeholder="Enter a new quote" />
+    <input id="newQuoteCategory" type="text" placeholder="Enter quote category" />
+    <button onclick="addQuote()">Add Quote</button>
+  </div>
 
-  <hr />
-
-  <!-- Filter by Category -->
-  <h2>Filter by Category</h2>
+  <!-- Filter dropdown (Task 2) -->
   <select id="categoryFilter" onchange="filterQuotes()">
     <option value="all">All Categories</option>
+    <!-- Categories will be populated dynamically -->
   </select>
 
-  <hr />
-
-  <!-- Import / Export JSON -->
-  <h2>Import / Export Quotes</h2>
+  <!-- JSON import/export (Task 1) -->
   <input type="file" id="importFile" accept=".json" onchange="importFromJsonFile(event)" />
-  <button onclick="exportToJsonFile()">Export Quotes</button>
+  <button onclick="exportToJsonFile()">Export Quotes as JSON</button>
 
+  <!-- Link to script -->
   <script src="script.js"></script>
 </body>
 </html>
